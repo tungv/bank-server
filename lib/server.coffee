@@ -72,7 +72,7 @@ class BankServer
     return models
 
 
-  start: (opts)->
+  start: (opts={})->
     port = opts.port or process.env.PORT or 3000
     @http = @app.listen port
     logger.info 'server started on port %s', port
